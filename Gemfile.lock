@@ -1,0 +1,29 @@
+GIT
+  remote: git://github.com/RX14/youtrack.git
+  revision: 91a22209bcca22bc0b7fa51cd91a28902e6e5c5e
+  branch: master
+  specs:
+    youtrack (0.0.12)
+      httparty
+      multipart-post
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cinch (2.2.5)
+    cinch-identify (1.7.0)
+      cinch (~> 2.0)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.2)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cinch
+  cinch-identify
+  youtrack!
