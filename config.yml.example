@@ -1,0 +1,14 @@
+---
+youtrack:
+  url: http://tracker.example.com/
+
+projects:
+  - TEST
+
+irc:
+  server: my.irc.server
+  nick: Changeme
+  channels: ["#MyChannel"]
+  nickserv:
+    username: Test
+    password: herpaderpa
