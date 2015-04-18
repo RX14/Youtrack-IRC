@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/RX14/youtrack.git
-  revision: 91a22209bcca22bc0b7fa51cd91a28902e6e5c5e
+  revision: 27eca167a573b7dd60525ebd3ccbec4fed16008e
   branch: master
   specs:
-    youtrack (0.0.12)
+    youtrack (0.0.11)
       httparty
       multipart-post
 
