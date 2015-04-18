@@ -40,25 +40,24 @@ end
 
 $cc = 3.chr
 $pink = $cc + "13"
-$white = $cc + "00"
 $grey = $cc + "15"
 $blue = $cc + "12"
 
 def format_new_issue(issue)
 	description = field issue, "description"
 	description = description.split("\n")[0..1].map { |l| l[0..400] }.join("\n")
-	description += " #{$grey}[truncated]#{$white}" if description != field(issue, "description")
-	return "[#{$pink + issue["id"] + $white}] #{field issue, "summary"}
-Subsystem: #{$grey + field(issue, "Subsystem")[0] + $white} Reporter: #{ $grey + field(issue, "reporterName") + $white} URL: #{ $blue + get_url(issue) + $white}
+	description += " #{$grey}[truncated]#{$cc}" if description != field(issue, "description")
+	return "[#{$pink + issue["id"] + $cc}] #{field issue, "summary"}
+Subsystem: #{$grey + field(issue, "Subsystem")[0] + $cc} Reporter: #{ $grey + field(issue, "reporterName") + $cc} URL: #{ $blue + get_url(issue) + $cc}
 #{description}"
 end
 
 def format_new_comment(issue, comment)
 	text = comment["text"]
 	text = text.split("\n")[0..1].map { |l| l[0..400] }.join("\n")
-	text += " #{$grey}[truncated]#{$white}" if text != comment["text"]
-	return "New comment by #{ $grey + comment["author"] + $white} on #{ $pink + issue["id"] + $white}: #{field issue, "summary"}
-#{ $blue + get_comment_url(issue, comment) + $white}
+	text += " #{$grey}[truncated]#{$cc}" if text != comment["text"]
+	return "New comment by #{ $grey + comment["author"] + $cc} on #{ $pink + issue["id"] + $cc}: #{field issue, "summary"}
+#{ $blue + get_comment_url(issue, comment) + $cc}
 #{text}"
 end
 
