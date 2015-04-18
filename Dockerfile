@@ -5,8 +5,10 @@ RUN \
   apt-get install --no-install-recommends -y git
 
 WORKDIR /youtrack-irc/
-ADD . /youtrack-irc/
+ADD Gemfile Gemfile.lock /youtrack-irc/
 
 RUN bundle install
+
+ADD . /youtrack-irc/
 
 CMD ["/usr/local/bundle/bin/bundler", "exec", "ruby", "/youtrack-irc/youtrack-irc.rb"]
